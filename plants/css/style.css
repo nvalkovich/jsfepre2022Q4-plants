@@ -47,7 +47,6 @@
 }
 
 html {
-
   margin: 0 auto;
   scroll-behavior: smooth;
 }
@@ -75,9 +74,10 @@ body {
 .header-logo-link {
   text-decoration: none;
   margin-bottom: 5px;
+  transition: 1s;
 }
 
-.header-logo-img {
+.header-logo-svg {
   width: 21px;
   height: 21px;
 }
@@ -90,14 +90,16 @@ body {
   margin-left: -2.5px;
 }
 
+.header-logo-link:hover {
+  transform: scale(1.1);
+}
+
 .nav-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
   gap: 47px;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-link {
@@ -105,13 +107,12 @@ body {
   font-family: 'Inika';
   font-size: 16px;
   color: #010201;
-  height: 50px;
+  transition: 0.5s;
 }
 
-.nav-link:active {
+.nav-link:hover {
   color: #E06733;
   font-weight: 700px;
-  height: 50px;
 }
 
 .welcome {
@@ -131,7 +132,7 @@ body {
 .leafs-img {
   width: 460px;
   height: 423px;
-  margin-left: -10px;
+  margin-left: -9px;
 }
 
 .welcome-text {
@@ -166,13 +167,13 @@ body {
 .welcome-text>button {
   font-family: 'Inter';
   font-size: 16px;
-  line-height: 25px;
   width: 158px;
   height: 44px;
   border: 2px solid #E06733;
   border-radius: 10px;
   background-color: #EDF2EC;
   margin-bottom: 19px;
+  transition: 0.5s;
 }
 
 .about-us {
@@ -228,7 +229,7 @@ body {
 
 .service {
   max-width: 1440px;
-  height: 1300px;
+  height: 1260px;
   margin: 0 auto;
 }
 
@@ -258,6 +259,7 @@ body {
   border: 1px solid #E06733;
   border-radius: 5px;
   background-color: #EDF2EC;
+  transition: 0.5s;
 }
 
 .services-content>h2 {
@@ -423,6 +425,13 @@ body {
   border: 1px solid #E06733;
   border-radius: 5px;
   background-color: #FFFFFF;
+  transition: 1s;
+}
+
+.btns:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #E06733;
 }
 
 .prices-leafs-img {
@@ -474,16 +483,11 @@ body {
 
 input[type="text"] {
   border: none;
-  margin: 0;
-  outline: none;
   background-color: #D6E7D2;
   width: 204px;
   height: 40px;
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
-  line-height: 40px;
   letter-spacing: 0.05em;
   color: #717171;
   margin-left: 17px;
@@ -532,21 +536,21 @@ footer {
   color: #000000;
 }
 
-.footer-gh-link {
+.footer-links {
   font-family: 'Inter';
   font-size: 20px;
   line-height: 50px;
   color: #000000;
   text-decoration: none;
+  transition: 0.7s;
 }
 
 .footer-rs-school-link {
-  text-decoration: none;
-  font-family: 'Inter';
-  font-size: 20px;
-  line-height: 50px;
-  color: #000000;
   margin-left: 59px;
+}
+
+.footer-links:hover {
+  color: #E06733;
 }
 
 .footer-social-list {
@@ -559,4 +563,10 @@ footer {
 
 .footer-social-link {
   list-style-type: none;
+  transition: 1.5s;
+}
+
+.social-list-ico:hover {
+  filter: invert(47%) sepia(99%) saturate(1483%) hue-rotate(342deg) brightness(93%) contrast(88%);
+  transform: scale(1.1);
 }
