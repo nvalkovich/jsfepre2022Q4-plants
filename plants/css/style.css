@@ -562,7 +562,7 @@ footer {
 }
 
 
-@media (min-width: 1354px) and (max-width: 1420px) {
+@media (max-width: 1420px) {
   .services-content {
     width: 100%;
     padding: 0px 15px 10px 15px;
@@ -576,7 +576,7 @@ footer {
 
 }
 
-@media (min-width: 1279px) and (max-width: 1353px) {
+@media (max-width: 1353px) {
   .services-content {
     width: 100%;
     padding: 0px 15px 5px 15px;
@@ -592,7 +592,7 @@ footer {
   }
 }
 
-@media (min-width: 1179px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
 
   .services-content {
     margin: 40px 0px 80px 0px;
@@ -658,7 +658,7 @@ footer {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1179px) {
+@media (max-width: 1179px) {
 
   .services-content {
     margin: 40px 0px 80px 0px;
@@ -724,73 +724,26 @@ footer {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1000px) {
-
-  .main-container {
-    max-width: 768px;
+@media (max-width: 1000px) {
+  .navbar {
+    gap: 100px;
   }
 
   .wrapper-header {
     padding: 50px 0px 28px 0px;
   }
 
-  .navbar {
-    gap: 90px;
-    margin-top: 0px;
-    padding-right: 3px;
-  }
-
-  .header-logo-link {
-    padding-left: 0px;
-  }
-
-  .navbar {
-    padding-right: 0px;
-  }
-
-  .header-logo-svg {
-    margin-top: -3px;
-  }
-
-  .welcome-content {
-    width: 100%;
-    padding: 0px 0px 86px 0px;
+  .welcome-text>h1 {
+    font-size: 35px;
   }
 
   .welcome-leafs-img {
     width: 290px;
     height: 270px;
-    order: 0;
-    margin-top: 14px;
-    margin-left: 0px;
-  }
-
-  .welcome-text {
-    width: 58%;
-    height: 310px;
-    order: -1;
-    margin: 40px 0px 0px 0px;
-  }
-
-  .welcome-text>h1 {
-    font-size: 35px;
-  }
-
-  .welcome-text>p {
-    width: 90%;
-    font-size: 16px;
-    line-height: 25px;
-    margin: 30px 0px 14px 0px;
-    padding: 2px 0px 0px 5px;
-  }
-
-  .welcome-text>button {
-    line-height: 20px;
-    margin-top: 19px;
   }
 
   .about-us-content {
-    padding: 35px 0px;
+    padding: 50px 0px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -801,7 +754,7 @@ footer {
   .about-us-text>h2 {
     margin: 0 auto;
     text-align: center;
-    font-size: 35px;
+    font-size: 37px;
     line-height: 46px;
   }
 
@@ -817,36 +770,20 @@ footer {
   }
 
   .services-content {
-    width: 90%;
-    margin: 60px 0px 41px 0px;
-    display: block;
-  }
-
-  .services-content>h2 {
-    width: 60%;
-    font-size: 35px;
-    line-height: 46px;
-    padding-bottom: 40px;
-  }
-
-  .service-btns {
-    width: 93%;
-    gap: 42px;
-    margin: 0px;
-  }
-
-  .service-btns>button {
-    width: 200px;
-    height: 50px;
+    margin: 40px 0px 80px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .services {
     padding: 0px 0px 73px 0px;
     display: grid;
     grid-template-columns: 280px 280px;
-    column-gap: 90px;
+    column-gap: 80px;
     row-gap: 40px;
-    justify-content: space-between;
+    justify-content: center;
     justify-items: stretch;
   }
 
@@ -871,46 +808,14 @@ footer {
     text-align: center;
   }
 
-  .prices-content {
-    padding: 41px 0px 82px 0px;
-  }
-
   .prices-options>h2 {
-    padding-left: 14px;
-    font-size: 35px;
-    line-height: 42px;
-  }
-
-  .prices-items {
-    margin-top: 54px;
-  }
-
-  .prices-items-list {
-    padding: 19px 0px 0px 40px;
-    gap: 0px;
-  }
-
-  .price-item-link {
-    margin: 16px 0px;
-    border-radius: 20px;
-  }
-
-  .text-call-us {
-    position: relative;
-    padding-top: 100px;
-    width: 60%;
+    font-size: 33px;
   }
 
   .text-call-us>h3 {
     font-size: 25px;
     line-height: 35px;
     margin-bottom: 25px;
-  }
-
-  .prices-leafs-img {
-    margin-top: 31px;
-    width: 156px;
-    height: 186px;
   }
 
   .wrapper-contacts {
@@ -946,25 +851,171 @@ footer {
   }
 
   .contact-img>img {
-    width: 200px;
-    height: 248.49px;
-    margin: 346px 0px 0px 110px;
-  }
-
-  .wrapper-footer {
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer-content {
-    padding: 19px 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    margin: 50px 0px 0px 0px;
   }
 
   .footer-data {
-    margin-top: 15px;
+    gap: 5px;
+  }
+
+  .footer-social-list {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    max-width: 768px;
+  }
+
+  .navbar {
+    gap: 70px;
+    margin-top: 0px;
+    padding-right: 0px;
+  }
+
+  .header-logo-link {
+    padding-left: 0px;
+  }
+
+  .header-logo-svg {
+    margin-top: -3px;
+  }
+
+  .welcome-content {
+    width: 100%;
+    padding: 0px 0px 86px 0px;
+  }
+
+  .welcome-leafs-img {
+    width: 285px;
+    height: 264px;
+    order: 0;
+    margin-top: 14px;
+  }
+
+  .welcome-text {
+    width: 58%;
+    height: 310px;
+    order: -1;
+    margin: 40px 0px 0px 0px;
+  }
+
+  .welcome-text>p {
+    width: 90%;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 30px 0px 14px 0px;
+    padding: 2px 0px 0px 5px;
+  }
+
+  .welcome-text>button {
+    line-height: 20px;
+    margin-top: 19px;
+  }
+
+  .about-us-content {
+    padding: 35px 0px;
+  }
+
+  .about-us-text>h2 {
+    font-size: 35px;
+  }
+
+  .services-content {
+    width: 90%;
+    margin: 60px 0px 41px 0px;
+    display: block;
+    padding: 0px;
+  }
+
+  .services-content>h2 {
+    width: 60%;
+    font-size: 35px;
+    line-height: 46px;
+    padding-bottom: 40px;
+    text-align: start;
+  }
+
+  .service-btns {
+    width: 93%;
+    gap: 42px;
+    margin: 0px;
+  }
+
+  .service-btns>button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .services {
+    column-gap: 90px;
+    justify-content: space-between;
+  }
+
+  .prices-content {
+    padding: 41px 0px 82px 0px;
+  }
+
+  .prices-options>h2 {
+    padding-left: 14px;
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .prices-items {
+    margin-top: 54px;
+  }
+
+  .prices-items-list {
+    padding: 19px 0px 0px 40px;
+    gap: 0px;
+  }
+
+  .price-item-link {
+    margin: 16px 0px;
+    border-radius: 20px;
+  }
+
+  .text-call-us {
+    position: relative;
+    padding-top: 100px;
+    width: 60%;
+  }
+
+  .prices-leafs-img {
+    margin-top: 31px;
+    width: 156px;
+    height: 186px;
+  }
+
+  .wrapper-contacts {
+    padding: 0px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contacts-form>form {
+    margin-top: 80px;
+  }
+
+  .contact-img>img {
+    width: 200px;
+    height: 248.49px;
+    margin: 209px 0px 0px 95px;
+  }
+
+  .footer-content {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-data {
+    margin-top: 13px;
     gap: 23px;
   }
 
@@ -978,9 +1029,10 @@ footer {
 
   .footer-rs-school-link {
     padding-left: 0px;
-  }  
+  }
 
   .footer-social-list {
     height: 50px;
+    gap: 20px;
   }
 }
