@@ -250,7 +250,6 @@ body {
   object-fit: cover;
 }
 
-
 .services-content {
   width: 80.5%;
   margin: 40px 0px 80px 15px;
@@ -313,8 +312,7 @@ body {
 }
 
 .service-item-descriprion>h3 {
-  padding-top: 9px;
-  padding-bottom: 3px;
+  padding: 9px 0px 3px 0px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -507,7 +505,6 @@ footer {
 }
 
 .footer-content {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -562,4 +559,428 @@ footer {
 .social-list-ico:hover {
   filter: invert(47%) sepia(99%) saturate(1483%) hue-rotate(342deg) brightness(93%) contrast(88%);
   transform: scale(1.1);
+}
+
+
+@media (min-width: 1354px) and (max-width: 1420px) {
+  .services-content {
+    width: 100%;
+    padding: 0px 15px 10px 15px;
+  }
+
+  .services {
+    padding: 0px 15px 123px 50px;
+    column-gap: 50px;
+    ;
+  }
+
+}
+
+@media (min-width: 1279px) and (max-width: 1353px) {
+  .services-content {
+    width: 100%;
+    padding: 0px 15px 5px 15px;
+  }
+
+  .services {
+    padding: 0px 15px 100px 50px;
+    column-gap: 30px;
+  }
+
+  .services-content>h2 {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1179px) and (max-width: 1279px) {
+
+  .services-content {
+    margin: 40px 0px 80px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services {
+    padding: 0px 15px 100px 0px;
+    grid-template-columns: 329px 329px 329px;
+    column-gap: 20px;
+    row-gap: 59px;
+  }
+
+  .services-content>h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-btns {
+    margin-top: 30px;
+  }
+
+  .wrapper-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact us {
+    order: -1;
+  }
+
+  .contact-us>h2 {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    padding: 0px 0px 10px 0px;
+  }
+
+  .contacts-form {
+    order: 0;
+  }
+
+  .contacts-form>form {
+    position: relative;
+    top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact-img {
+    order: 1;
+    margin-top: 30px;
+    width: 320px;
+    height: 406.99px;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1179px) {
+
+  .services-content {
+    margin: 40px 0px 80px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services {
+    padding: 0px 15px 100px 70px;
+    grid-template-columns: 329px 329px;
+    column-gap: 100px;
+    row-gap: 59px;
+  }
+
+  .services-content>h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-btns {
+    margin-top: 30px;
+  }
+
+  .wrapper-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact us {
+    order: -1;
+  }
+
+  .contact-us>h2 {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    padding: 0px 0px 10px 0px;
+  }
+
+  .contacts-form {
+    order: 0;
+  }
+
+  .contacts-form>form {
+    position: relative;
+    top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact-img {
+    order: 1;
+    margin-top: 30px;
+    width: 320px;
+    height: 406.99px;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  .main-container {
+    max-width: 768px;
+  }
+
+  .wrapper-header {
+    padding: 50px 0px 28px 0px;
+  }
+
+  .navbar {
+    gap: 90px;
+    margin-top: 0px;
+    padding-right: 3px;
+  }
+
+  .header-logo-link {
+    padding-left: 0px;
+  }
+
+  .navbar {
+    padding-right: 0px;
+  }
+
+  .header-logo-svg {
+    margin-top: -3px;
+  }
+
+  .welcome-content {
+    width: 100%;
+    padding: 0px 0px 86px 0px;
+  }
+
+  .welcome-leafs-img {
+    width: 290px;
+    height: 270px;
+    order: 0;
+    margin-top: 14px;
+    margin-left: 0px;
+  }
+
+  .welcome-text {
+    width: 58%;
+    height: 310px;
+    order: -1;
+    margin: 40px 0px 0px 0px;
+  }
+
+  .welcome-text>h1 {
+    font-size: 35px;
+  }
+
+  .welcome-text>p {
+    width: 90%;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 30px 0px 14px 0px;
+    padding: 2px 0px 0px 5px;
+  }
+
+  .welcome-text>button {
+    line-height: 20px;
+    margin-top: 19px;
+  }
+
+  .about-us-content {
+    padding: 35px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-us-text>h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  .about-us-text>p {
+    width: 100%;
+    margin-top: 11px;
+  }
+
+  .houseplant-img {
+    width: 250px;
+    height: 258px;
+    margin: 70px 0px 59px 0px;
+  }
+
+  .services-content {
+    width: 90%;
+    margin: 60px 0px 41px 0px;
+    display: block;
+  }
+
+  .services-content>h2 {
+    width: 60%;
+    font-size: 35px;
+    line-height: 46px;
+    padding-bottom: 40px;
+  }
+
+  .service-btns {
+    width: 93%;
+    gap: 42px;
+    margin: 0px;
+  }
+
+  .service-btns>button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .services {
+    padding: 0px 0px 73px 0px;
+    display: grid;
+    grid-template-columns: 280px 280px;
+    column-gap: 90px;
+    row-gap: 40px;
+    justify-content: space-between;
+    justify-items: stretch;
+  }
+
+  .service-item>img {
+    width: 280px;
+    height: 350px;
+  }
+
+  .service-item-descriprion {
+    width: 280px;
+    height: 105px;
+    margin-top: -7px;
+  }
+
+  .service-item-descriprion>h3 {
+    padding: 16px 0px 6px 0px;
+  }
+
+  .service-item-descriprion>p {
+    width: 80%;
+    margin: 7px 0px 0px 28px;
+    text-align: center;
+  }
+
+  .prices-content {
+    padding: 41px 0px 82px 0px;
+  }
+
+  .prices-options>h2 {
+    padding-left: 14px;
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .prices-items {
+    margin-top: 54px;
+  }
+
+  .prices-items-list {
+    padding: 19px 0px 0px 40px;
+    gap: 0px;
+  }
+
+  .price-item-link {
+    margin: 16px 0px;
+    border-radius: 20px;
+  }
+
+  .text-call-us {
+    position: relative;
+    padding-top: 100px;
+    width: 60%;
+  }
+
+  .text-call-us>h3 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+
+  .prices-leafs-img {
+    margin-top: 31px;
+    width: 156px;
+    height: 186px;
+  }
+
+  .wrapper-contacts {
+    padding: 0px 0px 96px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contact us {
+    order: -1;
+  }
+
+  .contact-us>h2 {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .contacts-form {
+    order: 0;
+  }
+
+  .contacts-form>form {
+    margin-top: 3px;
+  }
+
+  input[type="text"] {
+    margin-left: 0px;
+  }
+
+  .contact-img {
+    order: 1;
+  }
+
+  .contact-img>img {
+    width: 200px;
+    height: 248.49px;
+    margin: 346px 0px 0px 110px;
+  }
+
+  .wrapper-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-content {
+    padding: 19px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-data {
+    margin-top: 15px;
+    gap: 23px;
+  }
+
+  .footer-data>p {
+    line-height: 24px;
+  }
+
+  .footer-links {
+    line-height: 24px;
+  }
+
+  .footer-rs-school-link {
+    padding-left: 0px;
+  }  
+
+  .footer-social-list {
+    height: 50px;
+  }
 }
