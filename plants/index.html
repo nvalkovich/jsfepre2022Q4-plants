@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/ico/logo_vector.ico">
-  <script src="index.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/hamburger.js"></script>
   <title>Plants</title>
 </head>
 
@@ -28,6 +29,10 @@
               <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
               <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
             </ul>
+            <div class="hamburger">
+              <img class="hamburger-open" src="./img/svg/hamburger.svg" alt="logo" class="header-logo-svg">
+              <img class="hamburger-close" src="./img/svg/close.svg" alt="logo" class="header-logo-svg">
+            </div>
           </nav>
         </div>
       </div>
@@ -155,7 +160,7 @@
           </div>
           <div class="contacts-form">
             <form>
-              <input type="text" placeholder="City">
+              <input type="text" placeholder="City" disabled>
               <button type="submit"><img src="./img/svg/accordion_btn.svg" alt="accordion-btn icon"></button>
             </form>
           </div>
