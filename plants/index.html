@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/ico/logo_vector.ico">
-  <script src="js/index.js"></script>
+  <script src="js/service-selector.js"></script>
+  <script src="js/price-accordion.js"></script>
   <script src="js/hamburger.js"></script>
   <title>Plants</title>
 </head>
@@ -48,7 +49,7 @@
               <h1>We grow <span style="color:#499A18">plants</span> and give you oxygen</h1>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s.</p>
-              <button class="btns">LEARN MORE</button>
+              <button class="btns"><a href="#about-us">LEARN MORE</a></button>
             </div>
           </div>
         </div>
@@ -75,48 +76,48 @@
           <div class="services-content">
             <h2>Service and our projects</h2>
             <div class="service-btns">
-              <button class="btns">Gardens</button>
-              <button class="btns">Lawn</button>
-              <button class="btns">Planting</button>
+              <button class="btns btns-service btn-gardens" data-name="gardens">Gardens</button>
+              <button class="btns btns-service btn-lawn" data-name="lawn">Lawn</button>
+              <button class="btns btns-service btn-planting" data-name="planting">Planting</button>
             </div>
           </div>
           <div class="services">
-            <div class="service-item">
+            <div class="service-item item-garden">
               <img src="./img/servise-img-1.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Garden care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-2.jpg" alt="planting img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-lawn">
               <img src="./img/servise-img-3.jpg" alt="lawn-care img">
               <div class="service-item-descriprion">
                 <h3>Lawn care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-4.jpg" alt="planting img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-garden">
               <img src="./img/servise-img-5.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Garden care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-6.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
@@ -132,19 +133,49 @@
             <div class="prices-options">
               <h2>Prices</h2>
               <div class="prices-items">
-                <ul class="prices-items-list">
-                  <li class="price-item-link"><span>Basics</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                  <li class="price-item-link"><span>Standard</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                  <li class="price-item-link"><span>Pro care</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                </ul>
+                <div class="prices-items-list">
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion accordion-basics"><span>Basics</span><button></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$15 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion accordion-standart"><span>Standard</span><button><img
+                          src="./img/svg/accordion_btn.svg" alt="icon"></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$25 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion accordion-pro"><span>Pro care</span><button><img
+                          src="./img/svg/accordion_btn.svg" alt="icon"></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$35 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
             <div class="text-call-us">
               <h3>Our best <span style="color:#499A18">gardeners</span> are ready to help you</h3>
-              <button class="btns">Contact us</button>
+              <button class="btns"><a href="#contacts">Contact us</a></button>
               <div class="prices-leafs-img"></div>
             </div>
           </div>

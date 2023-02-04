@@ -207,6 +207,10 @@ body {
   transition: 0.5s;
 }
 
+.welcome-text>button>a {
+  color: #000000;
+}
+
 .about-us {
   background-color: #FFFFFF;
 }
@@ -255,14 +259,14 @@ body {
   justify-content: space-between;
 }
 
-.service-btns {
+.service-btns-container {
   display: flex;
   justify-content: space-between;
   gap: 39px;
   margin-top: 10px;
 }
 
-.service-btns>button {
+.btns-service {
   font-family: 'Inika';
   font-size: 20px;
   line-height: 26px;
@@ -273,6 +277,17 @@ body {
   border-radius: 5px;
   background-color: #EDF2EC;
   transition: 0.5s;
+}
+
+.btns-service:disabled:hover {
+  background-color: #EDF2EC;
+  color: #E06733;
+  cursor: not-allowed;
+}
+
+.btn-active {
+  background-color: #E06733;
+  color: white;
 }
 
 .services-content>h2 {
@@ -291,6 +306,10 @@ body {
   grid-template-columns: 329px 329px 329px;
   column-gap: 118px;
   row-gap: 59px;
+}
+
+.service-item {
+  transition: 0.5s;
 }
 
 .service-item>img {
@@ -328,6 +347,11 @@ body {
   color: #717171;
 }
 
+.blur {
+  transition: 0.5s;
+  filter: blur(2px);
+}
+
 .prices {
   background-color: #FFFFFF;
 }
@@ -349,7 +373,6 @@ body {
 
 .prices-items {
   width: 332px;
-  height: 282.01px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
   margin-top: 59px;
@@ -361,11 +384,12 @@ body {
   flex-direction: column;
   list-style: none;
   position: relative;
-  padding: 33px 0px 0px 40px;
+  padding: 33px 0px 40px 40px;
   gap: 33px;
+
 }
 
-.price-item-link {
+.price-accordion {
   position: relative;
   width: 250px;
   height: 50px;
@@ -375,7 +399,7 @@ body {
   background: #EDF2EC;
 }
 
-.price-item-link>span {
+.price-accordion>span {
   position: absolute;
   left: 40px;
   font-family: 'Inter';
@@ -385,14 +409,89 @@ body {
   line-height: 20px;
 }
 
-.price-item-link>button {
+.price-accordion>button {
   position: absolute;
   top: 12px;
   right: 35px;
   border: none;
   width: 26px;
   height: 26px;
-  background: #EDF2EC;
+  background: #EDF2EC url("../img/svg/accordion_btn.svg") center no-repeat;
+  cursor: pointer;
+}
+
+.accordion-active {
+  background-color: #D6E7D2;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.accordion-active>button {
+  transform: rotate(180deg);
+  background-color: #D6E7D2;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  transition: 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  width: 250px;
+  background-color: #D6E7D2;
+  border-radius: 0px 0px 20px 20px;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+hr {
+  width: 164px;
+  border: 0.5px solid #AEA1A1;
+}
+
+.accordion-content-description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+  padding-top: 7px;
+}
+
+.accordion-content-cost {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 6px;
+}
+
+.accordion-content-cost>span {
+  color: #E06733;
+  font-size: 14px;
+}
+
+.btn-order {
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 3px 20px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.btn-order>a {
+  color: #717171;
+}
+
+.opened {
+  display: block;
 }
 
 .text-call-us {
@@ -427,12 +526,22 @@ body {
   border-radius: 5px;
   background-color: #FFFFFF;
   transition: 1s;
+  cursor: pointer;
+}
+
+.text-call-us>button>a {
+  color: #E06733;
+  ;
 }
 
 .btns:hover {
-  color: #FFFFFF;
   cursor: pointer;
   background-color: #E06733;
+  color: #FFFFFF;
+}
+
+.btns:hover>a {
+  color: #FFFFFF;
 }
 
 .prices-leafs-img {
@@ -615,7 +724,7 @@ footer {
     text-align: center;
   }
 
-  .service-btns {
+  .service-btns-container {
     margin-top: 30px;
   }
 
@@ -681,7 +790,7 @@ footer {
     text-align: center;
   }
 
-  .service-btns {
+  .service-btns-container {
     margin-top: 30px;
   }
 
@@ -940,13 +1049,13 @@ footer {
     text-align: start;
   }
 
-  .service-btns {
+  .service-btns-container {
     width: 93%;
     gap: 42px;
     margin: 0px;
   }
 
-  .service-btns>button {
+  .service-btns-container>button {
     width: 200px;
     height: 50px;
   }
@@ -971,13 +1080,8 @@ footer {
   }
 
   .prices-items-list {
-    padding: 19px 0px 0px 40px;
-    gap: 0px;
-  }
-
-  .price-item-link {
-    margin: 16px 0px;
-    border-radius: 20px;
+    padding: 19px 0px 19px 40px;
+    gap: 22px;
   }
 
   .text-call-us {
@@ -1076,6 +1180,10 @@ footer {
 
   .prices-content {
     padding: 41px 0px 52px 0px;
+  }
+
+  .accordion-content {
+    text-align: left;
   }
 
   .text-call-us {
@@ -1229,14 +1337,14 @@ footer {
     padding-bottom: 20px;
   }
 
-  .service-btns {
+  .service-btns-container {
     width: 100%;
     flex-wrap: nowrap;
     gap: 10px;
     margin: 5px 0px 34px 0px;
   }
 
-  .service-btns>button {
+  .service-btns-container>button {
     font-size: 15px;
     line-height: 20px;
     width: 121px;
@@ -1262,33 +1370,42 @@ footer {
 
   .prices-items {
     width: 203px;
-    height: 235px;
   }
 
   .prices-items-list {
     margin-top: 16px;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 15px 10px;
   }
 
-  .price-item-link {
+  .price-accordion {
     position: relative;
     width: 180px;
     height: 49.72px;
-    margin: 10px 0px;
   }
 
-  .price-item-link>span {
+  .price-accordion>span {
     left: 30px;
     font-size: 15px;
     line-height: 20px;
   }
 
-  .price-item-link>button {
+  .price-accordion>button {
     top: 17px;
     right: 40px;
     width: 16px;
     height: 15.91px;
   }
+
+  hr {
+    width: 160px;
+    margin-left: 0px;
+  }
+
+  .accordion-content {
+    width: 180px;
+    padding-left: 10px;
+  }
+
 
   .text-call-us {
     width: 100%;
@@ -1464,7 +1581,7 @@ footer {
     line-height: 33px;
   }
 
-  .service-btns {
+  .service-btns-container {
     width: 80%;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -1498,29 +1615,27 @@ footer {
 
   .prices-items {
     width: 224px;
-    height: 235px;
     margin-top: 37px;
   }
 
   .prices-items-list {
-    margin-top: 17.5px;
+    margin: 17.5px 0px;
     padding: 0px 0px 0px 23px;
   }
 
-  .price-item-link {
+  .price-accordion {
     position: relative;
     width: 180px;
     height: 49.72px;
-    margin: 8px 0px;
   }
 
-  .price-item-link>span {
+  .price-accordion>span {
     left: 30px;
     font-size: 15px;
     line-height: 20px;
   }
 
-  .price-item-link>button {
+  .price-accordion>button {
     top: 17px;
     right: 40px;
     width: 16px;
@@ -1612,7 +1727,7 @@ footer {
   }
 
 
-  .service-btns {
+  .service-btns-container {
     width: 100%;
   }
 
