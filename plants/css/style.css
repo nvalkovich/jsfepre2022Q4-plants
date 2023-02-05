@@ -103,7 +103,7 @@ body {
 
 .header-logo-link {
   text-decoration: none;
-  transition: 1s;
+  transition: 0.5s;
   padding-left: 15px;
 }
 
@@ -195,7 +195,7 @@ body {
   color: #636060;
 }
 
-.welcome-text>button {
+.welcome-text>button{
   font-family: 'Inter';
   font-size: 16px;
   width: 158px;
@@ -207,9 +207,20 @@ body {
   transition: 0.5s;
 }
 
-.welcome-text>button>a {
+.welcome-text>button>a{
   color: #000000;
 }
+
+.welcome-text>button:hover {
+  cursor: pointer;
+  background-color: #E06733;
+  color: #FFFFFF;
+}
+
+.welcome-text>button:hover>a {
+  color: #FFFFFF;
+}
+
 
 .about-us {
   background-color: #FFFFFF;
@@ -272,11 +283,17 @@ body {
   line-height: 26px;
   width: 161px;
   height: 50px;
-  color: #E06733;
   border: 1px solid #E06733;
   border-radius: 5px;
+  transition: 0.2s;
+  color: #E06733;
   background-color: #EDF2EC;
-  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btns-service:hover {
+  background-color: #E06733;
+  color: white;
 }
 
 .btns-service:disabled:hover {
@@ -426,9 +443,7 @@ body {
 }
 
 .accordion-active>button {
-  transform: rotate(180deg);
-  background-color: #D6E7D2;
-  cursor: pointer;
+  background: #D6E7D2 url("../img/svg/accordion_btn_active.svg");
 }
 
 .accordion-content {
@@ -486,7 +501,7 @@ hr {
   cursor: pointer;
 }
 
-.btn-order>a {
+.btn-order > a {
   color: #717171;
 }
 
@@ -494,7 +509,7 @@ hr {
   display: block;
 }
 
-.text-call-us {
+.text-contact-us {
   width: 40%;
   text-align: right;
   display: flex;
@@ -502,7 +517,7 @@ hr {
   align-items: flex-end;
 }
 
-.text-call-us>h3 {
+.text-contact-us>h3 {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -512,7 +527,7 @@ hr {
   margin-bottom: 40px;
 }
 
-.text-call-us>button {
+.text-contact-us>button {
   font-family: 'Inika';
   font-style: normal;
   font-weight: 700;
@@ -525,22 +540,21 @@ hr {
   border: 1px solid #E06733;
   border-radius: 5px;
   background-color: #FFFFFF;
-  transition: 1s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
-.text-call-us>button>a {
+.text-contact-us>button>a{
   color: #E06733;
-  ;
 }
 
-.btns:hover {
+.text-contact-us>button:hover {
   cursor: pointer;
   background-color: #E06733;
   color: #FFFFFF;
 }
 
-.btns:hover>a {
+.text-contact-us>button:hover>a {
   color: #FFFFFF;
 }
 
@@ -579,6 +593,7 @@ hr {
 .contacts-select-block {
   position: relative;
   top: 96px;
+  cursor: pointer;
 }
 
 .contacts-select {
@@ -590,7 +605,6 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .contacts-select>span {
@@ -615,12 +629,12 @@ hr {
   top: 16px;
   right: 35px;
   border: none;
-  background: #D6E7D2 url("../img/svg/accordion_btn.svg") center no-repeat;
+  background: #D6E7D2 url("../img/svg/select_btn.svg") center no-repeat;
   cursor: pointer;
 }
 
 .contacts-selected>.contacts-select-btn {
-  background: #C1E698 url("../img/svg/accordion_btn.svg") center no-repeat;
+  background: #C1E698 url("../img/svg/select_btn.svg") center no-repeat;
 }
 
 .contacts-select-active>.contacts-select-btn {
@@ -632,6 +646,7 @@ hr {
   background: #DCE9D9;
   padding: 11px 0px 30px 18px;
   display: none;
+  cursor: auto;
 }
 
 .contacts-select-active+.contacts-select-content {
@@ -653,20 +668,52 @@ hr {
   padding-top: 22px;
   padding-bottom: 0px;
   padding-left: 5px;
+  cursor: pointer;
 }
 
-.select-content-link>a:hover {
+.select-content-link:hover {
   cursor: pointer;
   color: #717171;
+  border-bottom: 2px solid #717171;
 }
 
 .contacts-adress {
   width: 448px;
   height: 214px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   background: #EDF2EC;
   border: 1px solid #000000;
   border-radius: 20px;
+  cursor: auto;
   display: none;
+}
+
+.contacts-adress-info {
+  display: grid;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: 0.42fr 1fr;
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+.contacts-adress-category {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.contacts-adress-card-data {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #717171;
 }
 
 .adress-card {
@@ -674,30 +721,20 @@ hr {
   width: 339px;
   padding-left: 33px;
   padding-top: 17px;
-  gap: 18px;
-}
-
-.adress-card-categories {
-  font-family: 'Inter';
-  font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  color: #000000;
-}
-
-.adress-card-data {
-  font-family: 'Inter';
-  font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  color: #717171;
+  gap: 10px;
 }
 
 .phone {
   color: #717171;
 }
 
-.contacts-adress>a>button {
+.contacts-adress-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.contacts-adress-button>a>button {
   width: 122px;
   height: 26px;
   border: 1px solid #E06733;
@@ -708,7 +745,6 @@ hr {
   line-height: 13px;
   text-align: center;
   color: #717171;
-  margin: 20px 0px 0px 165px;
   cursor: pointer;
 }
 
@@ -862,21 +898,25 @@ footer {
 
   .contacts-select {
     order: 0;
+    top: 0px;
   }
 
-  .contacts-select {
-    position: relative;
-    top: 20px;
-    margin-bottom: 30px;
+  .contacts-select-content {
+    padding: 0px 0px 30px 18px;
+  }
+
+  .contacts-adress {
+    margin-top: 60px
   }
 
   .contact-img {
     order: 1;
-    margin-top: 30px;
+    margin-top: 170px;
     width: 320px;
-    height: 406.99px;
+    height: 456.99px;
     margin-right: 50px;
   }
+
 }
 
 @media (max-width: 1179px) {
@@ -928,22 +968,8 @@ footer {
     padding: 0px 0px 10px 0px;
   }
 
-  .contacts-select {
-    order: 0;
-  }
-
-  .contacts-select {
-    position: relative;
-    top: 20px;
-    margin-bottom: 30px;
-  }
-
   .contact-img {
-    order: 1;
-    margin-top: 30px;
-    width: 320px;
-    height: 406.99px;
-    margin-right: 50px;
+    margin-top: 110px;
   }
 }
 
@@ -1035,7 +1061,7 @@ footer {
     font-size: 33px;
   }
 
-  .text-call-us>h3 {
+  .text-contact-us>h3 {
     font-size: 25px;
     line-height: 35px;
     margin-bottom: 25px;
@@ -1069,12 +1095,16 @@ footer {
     margin-left: 0px;
   }
 
+  .contacts-adress {
+    margin-bottom: 0px;
+  }
+
   .contact-img {
     order: 1;
   }
 
   .contact-img>img {
-    margin: 50px 0px 0px 0px;
+    margin-top: 60px;
   }
 
   .footer-data {
@@ -1085,6 +1115,8 @@ footer {
     gap: 5px;
   }
 }
+
+/*tablet*/
 
 @media (max-width: 768px) {
   .main-container {
@@ -1132,7 +1164,7 @@ footer {
     padding: 2px 0px 0px 5px;
   }
 
-  .welcome-text>button {
+  .welcome-text>button{
     line-height: 20px;
     margin-top: 19px;
   }
@@ -1191,11 +1223,10 @@ footer {
   }
 
   .prices-items-list {
-    padding: 19px 0px 19px 40px;
-    gap: 22px;
+    gap: 33px;
   }
 
-  .text-call-us {
+  .text-contact-us {
     position: relative;
     padding-top: 100px;
     width: 60%;
@@ -1208,21 +1239,42 @@ footer {
   }
 
   .wrapper-contacts {
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }
 
+  .contacts-select-block {
+    top: 16px;
+  }
+
   .contacts-select {
-    margin-top: 80px;
+    position: relative;
+    margin-top: 83px;
+  }
+
+  .contacts-select-btn {
+    top: 16px;
+  }
+
+  .contacts-adress {
+    margin-bottom: -225px
+  }
+
+  .contact-img {
+    width: 260px;
+    height: 268.49px;
+    padding-left: 65px;
+    margin-top: 254px;
+    margin-bottom: -10px;
   }
 
   .contact-img>img {
     width: 200px;
     height: 248.49px;
-    margin: 209px 0px 0px 95px;
+    margin-top: 10px;
   }
 
   .footer-content {
@@ -1297,12 +1349,12 @@ footer {
     text-align: left;
   }
 
-  .text-call-us {
+  .text-contact-us {
     padding-top: 50px;
     width: 40%;
   }
 
-  .text-call-us>h3 {
+  .text-contact-us>h3 {
     margin-bottom: 40px;
   }
 
@@ -1311,7 +1363,7 @@ footer {
   }
 
   .contact-img>img {
-    margin: 178px 0px 0px 95px;
+    margin: 30px 0px 0px 0px;
   }
 }
 
@@ -1365,7 +1417,7 @@ footer {
     margin-top: 20px;
   }
 
-  .text-call-us {
+  .text-contact-us {
     width: 100%;
     display: flex;
     align-items: center;
@@ -1375,7 +1427,7 @@ footer {
     margin-top: 35px;
   }
 
-  .text-call-us>h3 {
+  .text-contact-us>h3 {
     width: 70%;
     height: 77px;
     text-align: center;
@@ -1390,6 +1442,22 @@ footer {
 
   .contacts-select {
     width: 430px;
+  }
+
+  .contacts-adress-info {
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .contacts-select-content {
+    width: 430px;
+  }
+
+  .contacts-adress {
+    width: 430px;
+  }
+
+  .contacts-adress-button {
+    margin-top: 25px;
   }
 }
 
@@ -1408,7 +1476,7 @@ footer {
     line-height: 35px;
   }
 
-  .welcome-text>button {
+  .welcome-text>button{
     font-size: 10px;
     line-height: 20px;
     width: 100px;
@@ -1518,18 +1586,18 @@ footer {
   }
 
 
-  .text-call-us {
+  .text-contact-us {
     width: 100%;
     margin: 0 auto;
     padding-top: 50px;
   }
 
-  .text-call-us>h3 {
+  .text-contact-us>h3 {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .text-call-us>button {
+  .text-contact-us>button {
     font-weight: 700;
     font-size: 15px;
     width: 100px;
@@ -1550,13 +1618,32 @@ footer {
   }
 
   .contact-img>img {
-    margin: 160px 0px 0px 95px;
+    margin: 20px 0px 0px 0px;
   }
 
   .contacts-select {
     width: 320px;
   }
 
+  .contacts-select-content {
+    width: 320px;
+  }
+
+  .select-content-link {
+   width: 280px;
+}
+
+  .contacts-adress {
+    width: 320px;
+  }
+
+  .contacts-adress-info {
+    grid-template-columns: 0.42fr 0.8fr;
+  }
+
+  .contacts-adress-button {
+    margin-top: 18px;
+  }
 }
 
 /*mobile*/
@@ -1646,13 +1733,17 @@ footer {
     color: #636060;
   }
 
-  .welcome-text>button {
+  .welcome-text>button{
     font-size: 10px;
     line-height: 20px;
     width: 100px;
     height: 34.14px;
     margin: 16px 0px 14px 0px;
     transition: 0.5s;
+  }
+
+  welcome-text>button>a {
+    color: #010201;
   }
 
   .welcome-leafs-img {
@@ -1730,8 +1821,9 @@ footer {
   }
 
   .prices-items-list {
-    margin: 17.5px 0px;
+    margin: 28px 0px;
     padding: 0px 0px 0px 23px;
+    gap: 15px;
   }
 
   .price-accordion {
@@ -1753,7 +1845,7 @@ footer {
     height: 15.91px;
   }
 
-  .text-call-us {
+  .text-contact-us {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1762,7 +1854,7 @@ footer {
     margin-top: 0px;
   }
 
-  .text-call-us>h3 {
+  .text-contact-us>h3 {
     width: 80%;
     font-size: 20px;
     line-height: 35px;
@@ -1770,7 +1862,7 @@ footer {
     margin: 20px 0px 14px 0px;
   }
 
-  .text-call-us>button {
+  .text-contact-us>button {
     font-size: 15px;
     line-height: 29px;
     width: 121px;
@@ -1794,15 +1886,61 @@ footer {
     height: 50px;
   }
 
-  .contacts-select>button {
+  .contacts-select-btn {
     position: absolute;
     right: 23px;
+  }
+
+  .contacts-select-block:has(.contacts-selected) {
+    margin-bottom: 300px;
+  }
+
+  .select-content-link {
+    width: 260px;
+  }
+
+  .contacts-adress {
+    width: 300px;
+    height: 212px;
+  }
+
+  .adress-card-categories {
+    max-width: 72px;
+  }
+
+  .contacts-adress {
+    width: 300px;
+    height: 212px;
+    margin-top: 50px;
+  }
+
+  .contacts-select-active+.contacts-select-content {
+    width: 300px;
+  }
+
+  .select-content-list {
+    width: 260px;
+  }
+
+  .adress-card-data {
+    max-width: 146px;
+  }
+
+  .contacts-adress-info {
+    gap: 8px;
+    grid-template-columns: 0.3fr 0.6fr;
+    margin-left: 30px;
   }
 
   .contact-img {
     width: 100px;
     height: 125px;
-    margin: 122px 0px 0px -3px;
+    margin: 150px 0px 0px -3px;
+    padding-left: 0px;
+  }
+
+  .contact-img-hidden {
+    display: none;
   }
 
   .contact-img>img {
@@ -1847,8 +1985,32 @@ footer {
     overflow: hidden;
   }
 
-  .contacts-select>button {
+  .contacts-select-btn {
     position: absolute;
     right: 23px;
+  }
+
+  .contacts-adress {
+    width: 260px;
+  }
+
+  .contacts-select-active+.contacts-select-content {
+    width: 260px;
+  }
+
+  .select-content-list {
+    width: 260px;
+  }
+
+  .select-content-link {
+    width: 220px;
+  }
+
+  .adress-card-data {
+    max-width: 126;
+  }
+
+  .contacts-adress-info {
+    grid-template-columns: 0.3fr 1fr;
   }
 }
