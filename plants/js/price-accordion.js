@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const allPriceAccordionContent = document.querySelectorAll('.accordion-content');
 
   allPriceAccordion.forEach((elem) => {
-    elem.addEventListener('click', () => {
+    elem.querySelector('button').addEventListener('click', () => {
       let content = elem.nextElementSibling;
 
       if (content.style.maxHeight) {

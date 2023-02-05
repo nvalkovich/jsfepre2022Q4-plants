@@ -411,11 +411,11 @@ body {
 
 .price-accordion>button {
   position: absolute;
-  top: 12px;
+  top: 18px;
   right: 35px;
   border: none;
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
   background: #EDF2EC url("../img/svg/accordion_btn.svg") center no-repeat;
   cursor: pointer;
 }
@@ -576,9 +576,12 @@ hr {
   padding: 7px 0px 0px 43px;
 }
 
-.contacts-form>form {
+.contacts-select-block {
   position: relative;
   top: 96px;
+}
+
+.contacts-select {
   width: 450px;
   height: 50px;
   background: #D6E7D2;
@@ -587,11 +590,10 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
-input[type="text"] {
-  border: none;
-  background-color: #D6E7D2;
+.contacts-select>span {
   font-family: 'Inter';
   font-size: 20px;
   letter-spacing: 0.05em;
@@ -599,11 +601,120 @@ input[type="text"] {
   padding-left: 19px;
 }
 
-button[type="submit"] {
+.contacts-selected,
+.contacts-select-active {
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  box-shadow: none;
+}
+
+.contacts-select-btn {
+  width: 16px;
+  height: 16px;
   position: absolute;
+  top: 16px;
   right: 35px;
   border: none;
-  background-color: #D6E7D2;
+  background: #D6E7D2 url("../img/svg/accordion_btn.svg") center no-repeat;
+  cursor: pointer;
+}
+
+.contacts-selected>.contacts-select-btn {
+  background: #C1E698 url("../img/svg/accordion_btn.svg") center no-repeat;
+}
+
+.contacts-select-active>.contacts-select-btn {
+  background: #C1E698 url("../img/svg/select_btn_active.svg") center no-repeat;
+}
+
+.contacts-select-content {
+  width: 450px;
+  background: #DCE9D9;
+  padding: 11px 0px 30px 18px;
+  display: none;
+}
+
+.contacts-select-active+.contacts-select-content {
+  position: absolute;
+  display: block;
+}
+
+.select-content-list {
+  width: 399px;
+}
+
+.select-content-link {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #499A18;
+  border-bottom: 1px solid #D9D9D9;
+  padding-top: 22px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+}
+
+.select-content-link>a:hover {
+  cursor: pointer;
+  color: #717171;
+}
+
+.contacts-adress {
+  width: 448px;
+  height: 214px;
+  background: #EDF2EC;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  display: none;
+}
+
+.adress-card {
+  display: flex;
+  width: 339px;
+  padding-left: 33px;
+  padding-top: 17px;
+  gap: 18px;
+}
+
+.adress-card-categories {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.adress-card-data {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #717171;
+}
+
+.phone {
+  color: #717171;
+}
+
+.contacts-adress>a>button {
+  width: 122px;
+  height: 26px;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #717171;
+  margin: 20px 0px 0px 165px;
+  cursor: pointer;
+}
+
+.contacts-adress-active {
+  display: block;
+  margin-top: 30px;
 }
 
 footer {
@@ -749,11 +860,11 @@ footer {
     padding: 0px 0px 10px 0px;
   }
 
-  .contacts-form {
+  .contacts-select {
     order: 0;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     position: relative;
     top: 20px;
     margin-bottom: 30px;
@@ -817,11 +928,11 @@ footer {
     padding: 0px 0px 10px 0px;
   }
 
-  .contacts-form {
+  .contacts-select {
     order: 0;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     position: relative;
     top: 20px;
     margin-bottom: 30px;
@@ -946,15 +1057,15 @@ footer {
     padding: 40px 0px 0px 0px;
   }
 
-  .contacts-form {
+  .contacts-select {
     order: 0;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     margin-top: 3px;
   }
 
-  input[type="text"] {
+  .contacts-select>span {
     margin-left: 0px;
   }
 
@@ -1104,7 +1215,7 @@ footer {
     justify-content: flex-start;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     margin-top: 80px;
   }
 
@@ -1277,7 +1388,7 @@ footer {
     height: 100px;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     width: 430px;
   }
 }
@@ -1442,7 +1553,7 @@ footer {
     margin: 160px 0px 0px 95px;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     width: 320px;
   }
 
@@ -1677,13 +1788,13 @@ footer {
     line-height: 33px;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     margin-top: 61px;
     width: 300px;
     height: 50px;
   }
 
-  button[type="submit"] {
+  .contacts-select>button {
     position: absolute;
     right: 23px;
   }
@@ -1731,12 +1842,12 @@ footer {
     width: 100%;
   }
 
-  .contacts-form>form {
+  .contacts-select {
     width: 260px;
     overflow: hidden;
   }
 
-  button[type="submit"] {
+  .contacts-select>button {
     position: absolute;
     right: 23px;
   }

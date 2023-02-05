@@ -10,6 +10,7 @@
   <script src="js/service-selector.js"></script>
   <script src="js/price-accordion.js"></script>
   <script src="js/hamburger.js"></script>
+  <script src="js/contacts-select.js"></script>
   <title>Plants</title>
 </head>
 
@@ -136,7 +137,7 @@
                 <div class="prices-items-list">
 
                   <div class="price-accordion-block">
-                    <div class="price-accordion accordion-basics"><span>Basics</span><button></button></div>
+                    <div class="price-accordion"><span>Basics</span><button></button></div>
                     <div class="accordion-content">
                       <hr>
                       <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
@@ -147,8 +148,7 @@
                   </div>
 
                   <div class="price-accordion-block">
-                    <div class="price-accordion accordion-standart"><span>Standard</span><button><img
-                          src="./img/svg/accordion_btn.svg" alt="icon"></button></div>
+                    <div class="price-accordion"><span>Standard</span><button></button></div>
                     <div class="accordion-content">
                       <hr>
                       <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
@@ -159,8 +159,7 @@
                   </div>
 
                   <div class="price-accordion-block">
-                    <div class="price-accordion accordion-pro"><span>Pro care</span><button><img
-                          src="./img/svg/accordion_btn.svg" alt="icon"></button></div>
+                    <div class="price-accordion"><span>Pro care</span><button></button></div>
                     <div class="accordion-content">
                       <hr>
                       <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
@@ -189,11 +188,87 @@
           <div class="contact-us">
             <h2>Contact us</h2>
           </div>
-          <div class="contacts-form">
-            <form>
-              <input type="text" placeholder="City" disabled>
-              <button type="submit"><img src="./img/svg/accordion_btn.svg" alt="accordion-btn icon"></button>
-            </form>
+          <div class="contacts-select-block">
+            <div class ="contacts-select">
+              <span>City</span>
+              <button class="contacts-select-btn"></button>
+            </div>
+            <div class="contacts-select-content">
+              <ul class="select-content-list">
+                <li class="select-content-link" data-name="canandaigua" ><a>Canandaigua, NY</a></li>
+                <li class="select-content-link" data-name="new-york"><a>New York City</a></li>
+                <li class="select-content-link" data-name="yonkers"><a>Yonkers, NY</a></li>
+                <li class="select-content-link" data-name="sherrill"><a>Sherrill, NY</a></li>
+              </ul>
+            </div>
+            <div class="contacts-adress" data-name="canandaigua">
+              <div class="adress-card">
+               <div class ="adress-card-categories">
+                <ul>
+                  <li>City:</li>
+                  <li>Phone:</li>
+                  <li>Office adress:</li>
+                </ul>
+               </div>
+               <div class="adress-card-data">
+                <li>Canandaigua, NY</li>
+                <li><a href="tel:+15853930001" class="phone">+1	585	393 0001</a></li>
+                <li>151 Charlotte Street</li>
+               </div>
+              </div>
+              <a href="tel:+15853930001" class="phone"><button>Call us</button></a>
+            </div>
+            <div class="contacts-adress" data-name="new-york">
+              <div class="adress-card">
+               <div class ="adress-card-categories">
+                <ul>
+                  <li>City:</li>
+                  <li>Phone:</li>
+                  <li>Office adress:</li>
+                </ul>
+               </div>
+               <div class="adress-card-data">
+                <li>New York City</li>
+                <li><a href="tel:+12124560002" class="phone">+1	212	456 0002</a></li>
+                <li>9 East 91st Street</li>
+               </div>
+              </div>
+              <a href="tel:+12124560002" class="phone"><button>Call us</button></a>
+            </div>
+          <div class="contacts-adress"  data-name="yonkers">
+            <div class="adress-card">
+             <div class ="adress-card-categories">
+              <ul>
+                <li>City:</li>
+                <li>Phone:</li>
+                <li>Office adress:</li>
+              </ul>
+             </div>
+             <div class="adress-card-data">
+              <li>Yonkers, NY</li>
+              <li><a href="tel:+19146780003" class="phone">+1	914	678 0003</a></li>
+              <li>511 Warburton Ave</li>
+             </div>
+            </div>
+            <a href="tel:+19146780003" class="phone"><button>Call us</button></a>
+          </div>
+          <div class="contacts-adress" data-name="sherrill">
+            <div class="adress-card">
+             <div class ="adress-card-categories">
+              <ul>
+                <li>City:</li>
+                <li>Phone:</li>
+                <li>Office adress:</li>
+              </ul>
+             </div>
+             <div class="adress-card-data">
+              <li>Sherrill, NY</li>
+              <li><a href="tel:+13159080004" class="phone">+1	315	908 0004</a></li>
+              <li>14 WEST Noyes BLVD</li>
+             </div>
+            </div>
+            <a href="tel:+13159080004" class="phone"><button>Call us</button></a>
+          </div>
           </div>
         </div>
       </section>
@@ -207,8 +282,7 @@
             <p><a href="https://github.com/nvalkovich" class="footer-links footer-gh-link">github</a></p>
           </div>
           <div class="footer-rs-school">
-            <p><a href="https://rs.school/js-stage0/" class="footer-links footer-rs-school-link">Rolling Scopes
-                School</a>
+            <p><a href="https://rs.school/js-stage0/" class="footer-links footer-rs-school-link">Rolling Scopes School</a>
             </p>
           </div>
           <div class="footer-social">
