@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/ico/logo_vector.ico">
-  <script src="js/index.js"></script>
+  <script src="js/service-selector.js"></script>
+  <script src="js/price-accordion.js"></script>
   <script src="js/hamburger.js"></script>
+  <script src="js/contacts-select.js"></script>
+  <script src="js/index.js"></script>
   <title>Plants</title>
 </head>
 
@@ -30,8 +33,8 @@
               <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
             </ul>
             <div class="hamburger">
-              <img class="hamburger-open" src="./img/svg/hamburger.svg" alt="logo" class="header-logo-svg">
-              <img class="hamburger-close" src="./img/svg/close.svg" alt="logo" class="header-logo-svg">
+              <img class="hamburger-open header-logo-svg" src="./img/svg/hamburger.svg" alt="logo">
+              <img class="hamburger-close header-logo-svg" src="./img/svg/close.svg" alt="logo">
             </div>
           </nav>
         </div>
@@ -48,7 +51,7 @@
               <h1>We grow <span style="color:#499A18">plants</span> and give you oxygen</h1>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s.</p>
-              <button class="btns">LEARN MORE</button>
+              <button class="btns"><a href="#about-us">LEARN MORE</a></button>
             </div>
           </div>
         </div>
@@ -74,49 +77,49 @@
         <div class="wrapper wrapper-service">
           <div class="services-content">
             <h2>Service and our projects</h2>
-            <div class="service-btns">
-              <button class="btns">Gardens</button>
-              <button class="btns">Lawn</button>
-              <button class="btns">Planting</button>
+            <div class="service-btns-container">
+              <button class="btns btns-service btn-gardens" data-name="gardens">Gardens</button>
+              <button class="btns btns-service btn-lawn" data-name="lawn">Lawn</button>
+              <button class="btns btns-service btn-planting" data-name="planting">Planting</button>
             </div>
           </div>
           <div class="services">
-            <div class="service-item">
+            <div class="service-item item-garden">
               <img src="./img/servise-img-1.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Garden care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-2.jpg" alt="planting img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-lawn">
               <img src="./img/servise-img-3.jpg" alt="lawn-care img">
               <div class="service-item-descriprion">
                 <h3>Lawn care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-4.jpg" alt="planting img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-garden">
               <img src="./img/servise-img-5.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Garden care</h3>
                 <p>Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item item-planting">
               <img src="./img/servise-img-6.jpg" alt="garden-care img">
               <div class="service-item-descriprion">
                 <h3>Planting</h3>
@@ -132,19 +135,47 @@
             <div class="prices-options">
               <h2>Prices</h2>
               <div class="prices-items">
-                <ul class="prices-items-list">
-                  <li class="price-item-link"><span>Basics</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                  <li class="price-item-link"><span>Standard</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                  <li class="price-item-link"><span>Pro care</span><button><img src="./img/svg/accordion_btn.svg"
-                        alt="icon"></button></li>
-                </ul>
+                <div class="prices-items-list">
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion"><span>Basics</span><button></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$15 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion"><span>Standard</span><button></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$25 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                  <div class="price-accordion-block">
+                    <div class="price-accordion"><span>Pro care</span><button></button></div>
+                    <div class="accordion-content">
+                      <hr>
+                      <p class="accordion-content-description">Release of Letraset sheets <br> containing Lorem Ipsum
+                        passages,<br>and more recently</p>
+                      <p class="accordion-content-cost"><span>$35 </span> / per hour</p>
+                      <button class="btn-order"><a href="#contacts">Order</a></button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
-            <div class="text-call-us">
+            <div class="text-contact-us">
               <h3>Our best <span style="color:#499A18">gardeners</span> are ready to help you</h3>
-              <button class="btns">Contact us</button>
+              <button class="btns"> <a href="#contacts">Contact us</a></button>
               <div class="prices-leafs-img"></div>
             </div>
           </div>
@@ -158,11 +189,76 @@
           <div class="contact-us">
             <h2>Contact us</h2>
           </div>
-          <div class="contacts-form">
-            <form>
-              <input type="text" placeholder="City" disabled>
-              <button type="submit"><img src="./img/svg/accordion_btn.svg" alt="accordion-btn icon"></button>
-            </form>
+          <div class="contacts-select-block">
+            <div class="contacts-select">
+              <span>City</span>
+              <button class="contacts-select-btn"></button>
+            </div>
+            <div class="contacts-select-content">
+              <ul class="select-content-list">
+                <li class="select-content-link" data-name="canandaigua"><a>Canandaigua, NY</a></li>
+                <li class="select-content-link" data-name="new-york"><a>New York City</a></li>
+                <li class="select-content-link" data-name="yonkers"><a>Yonkers, NY</a></li>
+                <li class="select-content-link" data-name="sherrill"><a>Sherrill, NY</a></li>
+              </ul>
+            </div>
+
+            <div class="contacts-adress" data-name="canandaigua">
+              <div class="contacts-adress-info">
+                <div class="contacts-adress-category">City:</div>
+                <div class="contacts-adress-card-data">Canandaigua, NY</div>
+                <div class="contacts-adress-category">Phone:</div>
+                <div class="contacts-adress-card-data"><a href="tel:+15853930001" class="phone">+1 585 393 0001</a>
+                </div>
+                <div class="contacts-adress-category">Office adress:</div>
+                <div class="contacts-adress-card-data">151 Charlotte Street</div>
+              </div>
+              <div class="contacts-adress-button">
+                <button><a href="tel:+15853930001" class="phone">Call us</a></button>
+              </div>
+            </div>
+            <div class="contacts-adress" data-name="new-york">
+              <div class="contacts-adress-info">
+                <div class="contacts-adress-category">City:</div>
+                <div class="contacts-adress-card-data">New York City</div>
+                <div class="contacts-adress-category">Phone:</div>
+                <div class="contacts-adress-card-data"><a href="tel:+12124560002" class="phone">+1 212 456 0002</a>
+                </div>
+                <div class="contacts-adress-category">Office adress:</div>
+                <div class="contacts-adress-card-data">9 East 91st Street</div>
+              </div>
+              <div class="contacts-adress-button">
+                <button><a href="tel:+12124560002" class="phone">Call us</a></button>
+              </div>
+            </div>
+            <div class="contacts-adress" data-name="yonkers">
+              <div class="contacts-adress-info">
+                <div class="contacts-adress-category">City:</div>
+                <div class="contacts-adress-card-data">Yonkers, NY</div>
+                <div class="contacts-adress-category">Phone:</div>
+                <div class="contacts-adress-card-data"><a href="tel:+19146780003" class="phone">+1 914 678 0003</a>
+                </div>
+                <div class="contacts-adress-category">Office adress:</div>
+                <div class="contacts-adress-card-data">511 Warburton Ave</div>
+              </div>
+              <div class="contacts-adress-button">
+                <button><a href="tel:+19146780003" class="phone">Call us</a></button>
+              </div>
+            </div>
+            <div class="contacts-adress" data-name="sherrill">
+              <div class="contacts-adress-info">
+                <div class="contacts-adress-category">City:</div>
+                <div class="contacts-adress-card-data">Sherrill, NY</div>
+                <div class="contacts-adress-category">Phone:</div>
+                <div class="contacts-adress-card-data"><a href="tel:+13159080004" class="phone">+1 315 908 0004</a>
+                </div>
+                <div class="contacts-adress-category">Office adress:</div>
+                <div class="contacts-adress-card-data">14 WEST Noyes BLVD</div>
+              </div>
+              <div class="contacts-adress-button">
+                <button><a href="tel:+13159080004" class="phone">Call us</a></button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
